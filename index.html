@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Way Back Home</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="intro-open">
+  <div id="volume-control">
+    <button id="volume-up" type="button">Volume Up</button>
+    <span id="volume-value" role="status" aria-live="polite">70%</span>
+    <button id="volume-down" type="button">Volume Down</button>
+  </div>
+  <div id="intro-screen" role="button" tabindex="0" aria-label="Begin the journey">
+    <div id="intro-copy">
+    <p>Welcome to the journey home with me.</p>
+    <p>Click the play button above to start the music.</p>
+    <p>Are you ready?</p>
+    <p>Click anywhere to begin the journey.</p>
+    </div>
+  </div>
+  <div id="scene">
+    <audio class="story-media" id="indoor-audio" preload="auto">
+      <source src="audio/school-hallway.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="floor-lines">
+      <div class="tile-line" id="tile1"></div>
+      <div class="tile-line" id="tile2"></div>
+      <div class="tile-line" id="tile3"></div>
+      <div class="tile-line" id="tile4"></div>
+      <div class="tile-column" id="column1"></div>
+      <div class="tile-column" id="column2"></div>
+    </div>
+    <div id="left-wall">
+      <div id="full-height-window">
+        <div class="glass-panel" id="glass-panel1"></div>
+        <div class="glass-panel" id="glass-panel2"></div>
+        <div class="glass-panel" id="glass-panel3"></div>
+      </div>
+    </div>
+    <div id="right-wall">
+      <div class="classroom-door door-right room-top">
+        <span class="room-number">CC1010</span><div class="door-handle"></div>
+      </div>
+      <div class="classroom-door door-right room-bottom">
+        <span class="room-number">CC1012</span><div class="door-handle"></div>
+      </div>
+    </div>
+    <div id="door">EXIT</div>
+
+    <div class="classmate" id="classmate1"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate2"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate3"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate4"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate5"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate6"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate7"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate8"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate9"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="classmate" id="classmate10"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div id="person"><img class="character-image" src="image/main-character.png" alt=""></div>
+
+    <div id="sound-player">
+      <button id="start-sound" type="button" aria-label="Play sound">▶</button>
+      <div id="track-progress"><div id="track-fill"></div></div>
+    </div>
+    <p id="caption">Class is finally over! Let’s head out of the building.</p>
+  </div>
+  <p id="outside-caption">A breath of fresh air. Let’s walk to the bus stop.</p>
+  <div id="outside-viewport">
+  <div id="outside-scene">
+    <audio class="story-media" id="outside-audio" preload="auto">
+      <source src="audio/leaving-school.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="story-media" id="bus-arrival-audio" preload="auto">
+    <source src="audio/bus-arrival-and-door-opening.mp3" type="audio/mpeg">
+  </audio>
+
+    <div id="school-building">
+              <div id="building-entrance"></div>
+    </div>
+    <div id="outside-ground"></div>
+    <div id="campus-path"></div>
+    <div class="campus-bench" style="left: 7%; top: 780px;">
+      <div class="bench-back"></div><div class="bench-seat"></div>
+      <div class="bench-leg bench-leg-left"></div><div class="bench-leg bench-leg-right"></div>
+    </div>
+    <div class="campus-bench" style="left: 75%; top: 1320px;">
+      <div class="bench-back"></div><div class="bench-seat"></div>
+      <div class="bench-leg bench-leg-left"></div><div class="bench-leg bench-leg-right"></div>
+    </div>
+    <div class="campus-bench" style="left: 8%; top: 1810px;">
+      <div class="bench-back"></div><div class="bench-seat"></div>
+      <div class="bench-leg bench-leg-left"></div><div class="bench-leg bench-leg-right"></div>
+    </div>
+    <div class="campus-bin" style="left: 24%; top: 800px;"><div class="bin-lid"></div><div class="bin-slot"></div></div>
+    <div class="campus-bin" style="left: 69%; top: 1340px;"><div class="bin-lid"></div><div class="bin-slot"></div></div>
+    <div class="campus-bin" style="left: 25%; top: 1830px;"><div class="bin-lid"></div><div class="bin-slot"></div></div>
+    <div id="campus-stall">
+      <div id="stall-canopy">COFFEE</div>
+      <div class="stall-post" id="stall-post-left"></div>
+      <div class="stall-post" id="stall-post-right"></div>
+      <div id="stall-counter"></div>
+    </div>
+    <div id="bus-road"><div id="bus-road-line"></div></div>
+    <div id="bus-stop"><span id="stop-name">BUS STOP</span><div id="stop-bench"></div></div>
+    <div class="outdoor-student" style="left: 9.0%; top: 470px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 15.0%; top: 528px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 9.0%; top: 586px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 74.0%; top: 620px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 80.0%; top: 678px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 21.0%; top: 850px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 27.0%; top: 908px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 73.0%; top: 1040px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 79.0%; top: 1098px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 73.0%; top: 1156px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 9.0%; top: 1270px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 15.0%; top: 1328px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 72.0%; top: 1460px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 78.0%; top: 1518px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 72.0%; top: 1576px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 21.0%; top: 1680px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 27.0%; top: 1738px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 21.0%; top: 1796px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 74.0%; top: 1840px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student walking-student" style="left: 80.0%; top: 1898px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 73.6%; top: 2223px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 60.4%; top: 2230px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 80.9%; top: 2234px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 64.1%; top: 2234px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 68.9%; top: 2252px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 63.6%; top: 2289px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 79.7%; top: 2307px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 75.5%; top: 2319px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 84.2%; top: 2321px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 71.4%; top: 2322px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 67.5%; top: 2336px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 61.8%; top: 2349px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 79.5%; top: 2380px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 74.6%; top: 2389px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 65.8%; top: 2409px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student" style="left: 85.0%; top: 2412px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student road-companion" id="road-companion1" style="left: 39%; top: 310px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student road-companion" id="road-companion3" style="left: 59%; top: 530px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="outdoor-student road-companion" id="road-companion4" style="left: 57%; top: 1600px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div id="arriving-bus">
+      <div id="bus-windows"></div><div id="bus-front-door"></div>
+      <div class="bus-wheel" id="bus-wheel-left"></div>
+      <div class="bus-wheel" id="bus-wheel-right"></div>
+    </div>
+    <div id="outside-person"><img class="character-image" src="image/main-character.png" alt=""></div>
+  </div>
+  </div>
+  <p id="interior-caption">I’d like to sit in the right-hand corner.</p>
+  <div id="bus-interior">
+    <audio class="story-media" id="bus-interior-audio" preload="auto">
+    <source src="audio/boarding-and-card-payment.mp3" type="audio/mpeg">
+  </audio>
+    <audio class="story-media" id="seated-crowd-audio" preload="auto">
+    <source src="audio/bus-passengers-and-chatter.mp3" type="audio/mpeg">
+  </audio>
+    <audio class="story-media" id="announcement-audio" preload="auto">
+    <source src="audio/bus-stop-announcement.mp3" type="audio/mpeg">
+  </audio>
+
+    <div id="bus-cabin"></div>
+    <div id="bus-aisle"></div>
+    <div id="driver-area" aria-label="Front windshield"></div>
+    <div class="interior-window" id="interior-window-left"></div>
+    <div class="interior-window" id="interior-window-right"></div>
+    <div class="bus-seat seat-left seat-row1"><div class="seat-divider2"></div></div>
+    <div class="bus-seat seat-right seat-row1"><div class="seat-divider2"></div></div>
+    <div class="bus-seat seat-left seat-row2"><div class="seat-divider2"></div></div>
+    <div class="bus-seat seat-right seat-row2"><div class="seat-divider2"></div></div>
+    <div class="bus-seat seat-left seat-row3"><div class="seat-divider2"></div></div>
+    <div class="bus-seat seat-right seat-row3" id="corner-seat" role="button" tabindex="0" aria-label="Sit in the right-hand corner"><div class="seat-divider2"></div></div>
+    <div class="bus-passenger seated-passenger" style="left: 29%; top: 150px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 64%; top: 150px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 29%; top: 300px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 64%; top: 300px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 29%; top: 450px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger" style="left: 46%; top: 220px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger" style="left: 51%; top: 355px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger" style="left: 45%; top: 440px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 36%; top: 150px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 71%; top: 150px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 36%; top: 300px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 71%; top: 300px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 36%; top: 450px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div class="bus-passenger seated-passenger" style="left: 64%; top: 445px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+    <div id="exit-bus-door">EXIT</div>
+    <div id="interior-person"><img class="character-image" src="image/main-character.png" alt=""></div>
+  </div>
+  <div id="headphones-scene">
+    <audio class="story-media" id="final-audio-2" preload="auto">
+    <source src="audio/elevator-wait-headphones-and-music.mp3" type="audio/mpeg">
+  </audio>
+
+    <div id="headphones-stage"><img id="headphones-image" src="image/white-headphones.png" alt="White over-ear headphones on a black background">
+      <video class="story-media" id="headphones-video" muted preload="metadata">
+      <source src="video/love-beyond-music-video.mp4" type="video/mp4">
+    </video>
+    </div>
+  </div>
+  <div id="home-street">
+    <audio class="story-media" id="final-audio-0" preload="auto">
+    <source src="audio/pedestrian-crossing.mp3" type="audio/mpeg">
+  </audio>
+    <audio class="story-media" id="final-audio-1" preload="auto">
+    <source src="audio/building-automatic-door.mp3" type="audio/mpeg">
+  </audio>
+
+    <div id="arrival-platform"></div>
+    <div id="arrival-stop-sign"><span>BUS STOP</span></div>
+    <div id="home-building"><div id="home-entrance"></div></div>
+    <div id="home-road"><div id="zebra-crossing">
+      <div class="crossing-stripe" style="top: 8px;"></div>
+      <div class="crossing-stripe" style="top: 43px;"></div>
+      <div class="crossing-stripe" style="top: 78px;"></div>
+      <div class="crossing-stripe" style="top: 113px;"></div>
+      <div class="crossing-stripe" style="top: 148px;"></div>
+    </div></div>
+<div class="street-pedestrian" style="left: 25%; top: 390px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 67%; top: 360px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 33%; top: 240px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 62%; top: 200px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 19%; top: 290px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 78%; top: 420px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 27%; top: 140px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="street-pedestrian" style="left: 71%; top: 125px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div id="home-person"><img class="character-image" src="image/main-character.png" alt=""></div>
+  </div>
+  <div id="elevator-lobby">
+    <audio class="story-media" id="final-audio-3" preload="auto">
+    <source src="audio/elevator-ding-and-opening.mp3" type="audio/mpeg">
+  </audio>
+    <audio class="story-media" id="final-audio-5" preload="auto">
+    <source src="audio/entering-elevator-footsteps.mp3" type="audio/mpeg">
+  </audio>
+    <audio class="story-media" id="final-audio-6" preload="auto">
+    <source src="audio/elevator-door-closing.mp3" type="audio/mpeg">
+  </audio>
+
+    <div id="elevator" role="button" tabindex="0" aria-label="Enter the elevator">
+      <div id="elevator-indicator">↑</div>
+      <div class="elevator-panel" id="elevator-left"></div>
+      <div class="elevator-panel" id="elevator-right"></div>
+      
+    </div>
+<div class="elevator-queue-person" style="left: 28%; top: 300px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="elevator-queue-person" style="left: 66%; top: 310px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="elevator-queue-person" style="left: 23%; top: 395px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="elevator-queue-person" style="left: 69%; top: 410px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="elevator-queue-person" style="left: 31%; top: 480px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div class="elevator-queue-person" style="left: 61%; top: 500px;"><img class="character-image" src="image/gray-classmate.png" alt=""></div>
+<div id="lobby-person"><img class="character-image" src="image/main-character.png" alt=""></div>  </div>
+  <div id="ending-screen"><div id="ending-message"><p>Welcome home.</p><p>Thank you for watching.</p><a id="restart-button" href="">Restart</a></div></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

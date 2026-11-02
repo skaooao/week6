@@ -1,0 +1,1274 @@
+body {
+  margin: 0;
+  height: 2500px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+#scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#left-wall {
+  position: absolute;
+  left: 0;
+  width: 18%;
+  height: 100%;
+  background-color: black;
+  border-right: 2px solid black;
+}
+
+#right-wall {
+  position: absolute;
+  right: 0;
+  width: 18%;
+  height: 100%;
+  background-color: black;
+  border-left: 2px solid black;
+}
+
+#door {
+  position: absolute;
+  z-index: 10;
+  left: 28%;
+  bottom: 0;
+  width: 44%;
+  height: 5%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+#person,
+.classmate {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+}
+
+#person {
+  left: 50%;
+  margin-left: -20px;
+  top: 15%;
+}
+
+#classmate1 {
+  left: 21%;
+  top: 25%;
+}
+
+#classmate2 {
+  left: 26%;
+  top: 29%;
+}
+
+#classmate3 {
+  left: 23%;
+  top: 36%;
+}
+
+#classmate4 {
+  left: 66%;
+  top: 39%;
+}
+
+#classmate5 {
+  left: 72%;
+  top: 43%;
+}
+
+#classmate6 {
+  left: 20%;
+  top: 65%;
+}
+
+#classmate7 {
+  left: 26%;
+  top: 69%;
+}
+
+#classmate8 {
+  left: 65%;
+  top: 77%;
+}
+
+#classmate9 {
+  left: 71%;
+  top: 81%;
+}
+
+#classmate10 {
+  left: 68%;
+  top: 88%;
+}
+
+#caption {
+  color: black;
+}
+
+#sound-player {
+  text-align: center;
+}
+
+#start-sound {
+  display: block;
+  margin: 0 auto 10px;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: none;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#track-progress {
+  height: 2px;
+  background-color: #dddddd;
+}
+
+#track-fill {
+  width: 0;
+  height: 100%;
+  background-color: black;
+}
+
+.classroom-door {
+  position: absolute;
+  width: 60%;
+  height: 16%;
+  border: 2px solid #777777;
+  background-color: #181818;
+  box-sizing: border-box;
+  color: #dddddd;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.door-right {
+  left: 12%;
+}
+
+.room-top {
+  top: 24%;
+}
+
+.room-bottom {
+  top: 61%;
+}
+
+.room-number {
+  display: block;
+  margin-top: 12px;
+}
+
+.door-handle {
+  position: absolute;
+  right: 10%;
+  top: 57%;
+  width: 12%;
+  height: 3px;
+  background-color: #aaaaaa;
+}
+
+#floor-lines {
+  position: absolute;
+  left: 18%;
+  top: 0;
+  width: 64%;
+  height: 100%;
+}
+
+.tile-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+}
+
+#tile1 {
+  top: 20%;
+}
+
+#tile2 {
+  top: 40%;
+}
+
+#tile3 {
+  top: 60%;
+}
+
+#tile4 {
+  top: 80%;
+}
+
+.tile-column {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid #eeeeee;
+}
+
+#column1 {
+  left: 33%;
+}
+
+#column2 {
+  left: 67%;
+}
+
+#door {
+  border-top: 3px solid #888888;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+
+#full-height-window {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 90%;
+}
+
+.glass-panel {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 27%;
+  box-sizing: border-box;
+  border: 4px solid black;
+  background-color: #e6e6e6;
+  overflow: hidden;
+}
+
+#glass-panel1 {
+  top: 0;
+}
+
+#glass-panel2 {
+  top: 36.5%;
+}
+
+#glass-panel3 {
+  top: 73%;
+}
+
+body.intro-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: black;
+  color: white;
+  display: block;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-style: italic;
+  cursor: pointer;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#intro-screen p {
+  margin: 12px 0;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+#intro-screen p:first-child {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+body.intro-open #sound-player {
+  position: fixed;
+  z-index: 30;
+}
+
+body.intro-open #start-sound {
+  color: white;
+}
+
+body.intro-open #track-progress {
+  background-color: #444444;
+}
+
+body.intro-open #track-fill {
+  background-color: white;
+}
+
+#outside-scene {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2790px;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+#school-building {
+  position: absolute;
+  left: 0;
+  top: 145px;
+  width: 100%;
+  height: 130px;
+  background-color: black;
+  border: 3px solid black;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#building-entrance {
+  position: absolute;
+  bottom: 0;
+  left: 42%;
+  width: 16%;
+  height: 85%;
+  background-color: white;
+}
+
+#outside-ground {
+  position: absolute;
+  top: 275px;
+  width: 100%;
+  height: 2215px;
+  background-color: #dddddd;
+}
+
+#campus-path {
+  position: absolute;
+  top: 275px;
+  left: 33%;
+  width: 34%;
+  height: 2215px;
+  background-color: white;
+}
+
+#outside-person {
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 290px;
+  width: 40px;
+  height: 80px;
+}
+
+body.outside-open {
+  height: 2790px;
+  overflow: auto;
+}
+
+.outdoor-student {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+}
+
+#bus-stop {
+  position: absolute;
+  top: 2050px;
+  left: 55%;
+  width: 34%;
+  height: 150px;
+  border-top: 10px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  box-sizing: border-box;
+  background-color: #cccccc;
+}
+
+#stop-name {
+  position: absolute;
+  top: -42px;
+  left: 0;
+  padding: 7px 12px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+#stop-bench {
+  position: absolute;
+  bottom: 20px;
+  left: 12%;
+  width: 76%;
+  height: 7px;
+  background-color: black;
+}
+
+#bus-road {
+  position: absolute;
+  top: 2490px;
+  width: 100%;
+  height: 300px;
+  background-color: #777777;
+}
+
+#bus-road-line {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+
+body.intro-open #caption {
+  visibility: hidden;
+}
+
+#outside-viewport {
+  display: none;
+  position: fixed;
+  top: 145px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+#outside-caption {
+  display: none;
+}
+
+#school-building {
+  z-index: 5;
+}
+
+.outdoor-student,
+#outside-person {
+  z-index: 2;
+}
+
+#sound-player,
+body.outside-open #sound-player {
+  position: fixed;
+  top: 85px;
+  bottom: auto;
+  left: 50%;
+  width: 140px;
+  margin-left: -70px;
+  z-index: 32;
+}
+
+.campus-bench {
+  position: absolute;
+  width: 105px;
+  height: 45px;
+}
+
+.bench-back {
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  background-color: #666666;
+}
+
+.bench-seat {
+  position: absolute;
+  top: 21px;
+  width: 100%;
+  height: 7px;
+  background-color: black;
+}
+
+.bench-leg {
+  position: absolute;
+  top: 28px;
+  width: 6px;
+  height: 17px;
+  background-color: black;
+}
+
+.bench-leg-left {
+  left: 12%;
+}
+
+.bench-leg-right {
+  right: 12%;
+}
+
+.campus-bin {
+  position: absolute;
+  width: 28px;
+  height: 42px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: #999999;
+}
+
+.bin-lid {
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  width: 32px;
+  height: 6px;
+  background-color: black;
+}
+
+.bin-slot {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 14px;
+  height: 5px;
+  background-color: black;
+}
+
+#campus-stall {
+  position: absolute;
+  left: 70%;
+  top: 920px;
+}
+
+#stall-canopy {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#stall-counter {
+  position: absolute;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  background-color: #bbbbbb;
+}
+
+.stall-post {
+  position: absolute;
+  background-color: black;
+}
+
+#bus-stop {
+  z-index: 6;
+}
+
+#arriving-bus {
+  position: absolute;
+  top: 2515px;
+  left: -50%;
+  width: 47%;
+  height: 195px;
+  background-color: black;
+  border-radius: 10px;
+  z-index: 8;
+  display: none;
+}
+
+#bus-windows {
+  position: absolute;
+  top: 20px;
+  left: 7%;
+  width: 66%;
+  height: 65px;
+  background-color: #cccccc;
+  overflow: hidden;
+}
+
+#bus-front-door {
+  position: absolute;
+  right: 7%;
+  top: 20px;
+  width: 13%;
+  height: 140px;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.bus-wheel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #222222;
+  border: 4px solid #aaaaaa;
+  border-radius: 50%;
+}
+
+#bus-wheel-left {
+  left: 12%;
+}
+
+#bus-front-door {
+  overflow: hidden;
+}
+
+.bus-wheel {
+  bottom: -28px;
+}
+
+#bus-wheel-right {
+  right: 24%;
+}
+
+#bus-interior {
+  display: none;
+  position: fixed;
+  top: 145px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+#bus-aisle {
+  position: absolute;
+  height: 100%;
+  background-color: white;
+}
+
+#driver-area {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.interior-window {
+  position: absolute;
+}
+
+.bus-seat {
+  position: absolute;
+  height: 85px;
+  background-color: #666666;
+  border-bottom: 12px solid black;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
+}
+
+.seat-row1 {
+  top: 140px;
+}
+
+.seat-row2 {
+  top: 290px;
+}
+
+.seat-row3 {
+  top: 440px;
+}
+
+#interior-person {
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 120px;
+  width: 40px;
+  height: 80px;
+}
+
+#interior-caption {
+  display: none;
+}
+
+#caption,
+#outside-caption,
+#interior-caption {
+  position: fixed;
+  top: 10px;
+  left: 20%;
+  width: 60%;
+  margin: 23px 0;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  min-height: 52px;
+  background-color: white;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.5;
+  z-index: 31;
+}
+
+#arriving-bus {
+  cursor: pointer;
+}
+
+body.on-bus {
+  height: 2300px;
+  overflow: auto;
+}
+
+#bus-interior {
+  background-color: black;
+}
+
+#bus-cabin {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #dddddd;
+}
+
+#driver-area {
+  left: 25%;
+  width: 50%;
+  height: 100px;
+  padding: 0;
+  background-color: #bbbbbb;
+  border: 8px solid black;
+  color: transparent;
+  overflow: hidden;
+}
+
+.interior-window {
+  top: 125px;
+  width: 12%;
+  height: 62%;
+  border: 5px solid black;
+  background-color: #cccccc;
+  overflow: hidden;
+}
+
+#interior-window-left {
+  left: 9%;
+}
+
+#interior-window-right {
+  right: 9%;
+}
+
+.bus-seat {
+  width: 15%;
+}
+
+.seat-left {
+  left: 27%;
+}
+
+.seat-right {
+  right: 27%;
+}
+
+#bus-aisle {
+  left: 44%;
+  width: 12%;
+}
+
+#corner-seat {
+  cursor: pointer;
+  outline: 2px solid #aaaaaa;
+}
+
+#corner-seat:hover,
+#corner-seat:focus {
+  outline: 3px solid black;
+}
+
+.bus-passenger {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  display: none;
+  z-index: 4;
+}
+
+#interior-person {
+  z-index: 5;
+}
+
+.bus-seat .seat-divider2 {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  bottom: 8px;
+  border-left: 2px solid #aaaaaa;
+}
+
+#headphones-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+#headphones-image {
+  display: block;
+}
+
+#interior-person.headphones-ready {
+  cursor: pointer;
+}
+
+body.headphones-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.headphones-open #interior-caption {
+  color: white;
+}
+
+body.headphones-open #start-sound {
+  color: white;
+}
+
+body.headphones-open #track-progress {
+  background-color: #444444;
+}
+
+body.headphones-open #track-fill {
+  background-color: white;
+}
+
+#headphones-stage {
+  width: 800px;
+  height: 800px;
+  margin-top: 0;
+}
+
+#headphones-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+#headphones-video {
+  position: absolute;
+  left: 16%;
+  top: 36%;
+  width: 68%;
+  height: auto;
+  object-fit: contain;
+  background-color: black;
+}
+
+#exit-bus-door {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 43%;
+  width: 14%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  z-index: 6;
+}
+
+#headphones-scene {
+  background-color: #d22f69;
+}
+
+body.headphones-open #interior-caption {
+  background-color: #d22f69;
+}
+
+#home-street,
+#elevator-lobby {
+  display: none;
+  position: fixed;
+  top: 145px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+#home-building {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 140px;
+  background-color: black;
+}
+
+#home-entrance {
+  position: absolute;
+  top: 30px;
+  left: 40%;
+  width: 20%;
+  height: 110px;
+  overflow: hidden;
+}
+
+#home-road {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: 180px;
+  background-color: #777777;
+}
+
+#zebra-crossing {
+  position: absolute;
+  top: 0;
+  left: 39%;
+  width: 22%;
+  height: 100%;
+}
+
+.crossing-stripe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background-color: white;
+}
+
+#home-person,
+#lobby-person {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  left: 50%;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+#home-person {
+  bottom: 20px;
+}
+
+#elevator-lobby {
+  background-color: #eeeeee;
+}
+
+#elevator {
+  position: absolute;
+  top: 35px;
+  left: 35%;
+  width: 30%;
+  height: 240px;
+  border: 8px solid #555555;
+  box-sizing: border-box;
+  overflow: visible;
+  cursor: default;
+}
+
+#elevator-indicator {
+  position: absolute;
+  top: -32px;
+  left: 35%;
+  width: 30%;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+
+#lobby-person {
+  top: 320px;
+  cursor: pointer;
+}
+
+#elevator.ready {
+  cursor: pointer;
+}
+
+#ending-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: black;
+}
+
+#exit-bus-door {
+  height: 30px;
+  line-height: 30px;
+}
+
+body.final-walk-open {
+  height: 3200px;
+  overflow: auto;
+}
+
+#arrival-platform {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 105px;
+  background-color: #bbbbbb;
+  border-top: 5px solid white;
+  box-sizing: border-box;
+}
+
+#arrival-stop-sign {
+  position: absolute;
+  left: 16%;
+  bottom: 20px;
+  height: 100px;
+  border-left: 5px solid black;
+}
+
+#arrival-stop-sign span {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  background-color: black;
+  color: white;
+  padding: 7px 10px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.street-pedestrian,
+.elevator-queue-person {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  z-index: 3;
+}
+
+#ending-message {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  color: white;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.8;
+}
+
+#ending-message p {
+  margin: 8px 0;
+}
+
+body.elevator-walk-open {
+  height: 2100px;
+  overflow: auto;
+}
+
+#restart-button {
+  margin-top: 28px;
+  padding: 10px 28px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#restart-button:hover {
+  background-color: white;
+  color: black;
+}
+
+#volume-control {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 110;
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+body.headphones-open #volume-control,
+body.story-ended #volume-control {
+  background-color: black;
+  color: white;
+}
+
+#volume-control {
+  background: transparent;
+  padding: 0;
+}
+
+#volume-control button {
+  background-color: black;
+  color: white;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+#volume-control button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+body.headphones-open #volume-control,
+body.story-ended #volume-control {
+  background: transparent;
+}
+
+#volume-control button {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 18px;
+  padding: 10px 14px;
+}
+
+#volume-value {
+  display: inline-block;
+  min-width: 58px;
+  padding: 10px 6px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 20px;
+}
+
+#headphones-scene {
+  display: none;
+}
+
+#headphones-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#restart-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+body.story-ended {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro-copy {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -135px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#ending-message {
+  margin-top: -130px;
+}
+
+#volume-control button,
+#volume-value {
+  margin-right: 6px;
+}
+
+#campus-stall {
+  width: 206px;
+  height: 165px;
+}
+
+#stall-canopy {
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+
+#stall-counter {
+  top: 107px;
+  height: 58px;
+}
+
+.stall-post {
+  top: 40px;
+  height: 67px;
+  width: 7px;
+}
+
+#stall-post-left {
+  left: 8px;
+}
+
+#stall-post-right {
+  right: 8px;
+}
+
+#volume-control {
+  display: none;
+}
+
+#bus-front-door {
+  background-color: #aaaaaa;
+  border-left: 3px solid white;
+}
+
+#home-entrance {
+  background-color: #eeeeee;
+}
+
+#elevator {
+  background-color: #bbbbbb;
+}
+
+body.after-bus-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.elevator-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #777777;
+  box-sizing: border-box;
+  background-color: #bbbbbb;
+  z-index: 8;
+}
+
+#elevator-left {
+  left: 0;
+}
+
+#elevator-right {
+  right: 0;
+}
+
+.character-image {
+  display: block;
+  width: 40px;
+  height: 80px;
+}
+
+.outdoor-student .character-image {
+  width: 38px;
+  height: 76px;
+}
+
+.seated-passenger .character-image,
+#interior-person.headphones-ready .character-image {
+  width: 34px;
+  height: 68px;
+}
+
